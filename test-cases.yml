@@ -101,15 +101,90 @@
   steps:
     - Нажимаем кнопку «Sign in with discord»
   expected-result: |
-    Перенаправляет на страницу для заполнения данных об аккаунте    
+    Перенаправляет на страницу для заполнения данных об аккаунте   
+    
+- summary: |
+    Проверка возможности использовать функцию "Try simple battle" 
+  requirement: |
+    Пользователь должен иметь возможность провести тестовую игру без регистрации
+  prerequisites: |
+    открыта главная страница (до регистрации)
+  test-data: no data
+  steps:
+    - Нажимаем кнопку «Try simple battle»
+  expected-result: |
+    Перенаправляет на игровую страницу
+    
+- summary: |
+    Проверка возможности писать в General чат
+  requirement: |
+    Пользователь должен иметь возможность общаться в общем чате
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - Пишем в General чат любой текст
+  expected-result: |
+    Сообщение успешно отправлено
 
+- summary: |
+    Проверка возможности на переключение с General на Notifications
+  requirement: |
+    Пользователь должен иметь возможность просматривать уведомления
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - нажимаем на вкладку General
+    - выбираем Notification
+  expected-result: |
+    Успешно переключились на вкладку Notification
 
+- summary: |
+    Проверка возможности отправлять смайлы в General чат
+  requirement: |
+    Пользователь должен иметь возможность общаться в общем чате
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - Пишем в General чат смайлами 
+  expected-result: |
+    Сообщение успешно отправлено
 
+- summary: |
+    Проверка возможности писать во вкладке Notificatoin
+  requirement: |
+    Пользователь не может обшаться во вкладке уведомлений
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - Пишем в Notification любой текст
+  expected-result: |
+    Сообщение не отправлено
+    
+- summary: |
+    Проверка возможности перейти в раздел Tournaments
+  requirement: |
+    Пользователь должен иметь возможность переходить в любые разделы
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - Нажимаем на раздел Tournaments
+  expected-result: |
+    Успешно перешли в раздел Tournaments
 
-
-
-
-
-
-
+- summary: |
+    Проверка возможности перейти в раздел History
+  requirement: |
+    Пользователь должен иметь возможность переходить в любые разделы
+  prerequisites: |
+    открыта главная страница (после регистрации)
+  test-data: no data
+  steps:
+    - Нажимаем на раздел History
+  expected-result: |
+    Успешно перешли в раздел History
     
